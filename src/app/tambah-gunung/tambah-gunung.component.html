@@ -1,0 +1,22 @@
+<h3 mat-dialog-title>Tambah Gunung</h3>
+<div mat-dialog-content>
+  <mat-form-field style="width: 100%;">
+    <mat-label>Nama Gunung</mat-label>
+    <input matInput [(ngModel)]="data.nama_gunung">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Dekripsi</mat-label>
+    <input matInput [(ngModel)]="data.deskripsi">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Tanggal Mendaki</mat-label>
+    <input matInput [(ngModel)]="data.tanggal_mendaki">
+  </mat-form-field>
+</div>
+<mat-dialog-actions>
+  <span class="spacer"></span>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="true">Save</button>
+</mat-dialog-actions>

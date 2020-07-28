@@ -1,0 +1,24 @@
+<div class="container">
+  <button class="btn-tambah" mat-raised-button color="primary" (click)="namaGunung()">Tambah Gunung</button>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Gunung yang telah di daki</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let item of dataGunung">
+          <img matListAvatar src="assets/semeru.png" alt="...">
+          <h3 matLine> {{item.nama_gunung}} </h3>
+          <p matLine>
+            <span> {{item.deskripsi}} </span>
+          </p>
+          <p matLine>
+            <span>Tanggal : {{item.tanggal_mendaki}}</span>
+          </p>
+          <button class="btn-edit" mat-raised-button color="accent"(click)="editGunung(item)">Edit</button>
+          <button class="btn-selesai" mat-raised-button color="warn" (click)="hapusGunung(item.id)">Done</button>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>
