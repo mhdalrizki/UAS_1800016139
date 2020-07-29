@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class ApiService {
 
   constructor(private http: HttpClient) { }
-  apiUrl: any = '';
+  apiUrl: any = 'http://localhost/rest-api/public/gunung';
 
   baca() {
     return this.http.get(this.apiUrl);
